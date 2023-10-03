@@ -1,0 +1,5 @@
+{
+  "extends": ["config:base"],
+  "baseBranches": ["master"],
+  "groupName": "all"
+}

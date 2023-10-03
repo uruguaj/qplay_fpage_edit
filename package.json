@@ -1,0 +1,50 @@
+{
+  "name": "qplay_frontpage_next",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "react-env --prefix NEXT_RUNTIME -- next dev",
+    "build": "next build",
+    "export": "next build && next export",
+    "start": "react-env --prefix NEXT_RUNTIME -- next start",
+    "lint": "next lint",
+    "build:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES yarn build",
+    "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES yarn export",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "postbuild": "next-sitemap"
+  },
+  "dependencies": {
+    "@beam-australia/react-env": "^3.1.1",
+    "@tanstack/react-query": "^4.29.14",
+    "axios": "1.4.0",
+    "cross-env": "7.0.3",
+    "he": "^1.2.0",
+    "lodash": "^4.17.21",
+    "next": "13.4.2",
+    "next-sitemap": "^4.0.9",
+    "react": "18.2.0",
+    "react-cookie-consent": "8.0.1",
+    "react-dom": "18.2.0",
+    "react-markdown": "^8.0.7",
+    "rehype-raw": "^6.1.1",
+    "remark": "^14.0.2",
+    "remark-breaks": "^3.0.3",
+    "remark-emoji": "^3.1.1",
+    "remark-gfm": "^3.0.1",
+    "remark-parse": "^10.0.1",
+    "sharp": "^0.32.1",
+    "strip-markdown": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/gtag.js": "^0.0.12",
+    "@types/he": "^1.2.0",
+    "@types/lodash": "^4.14.195",
+    "@types/node": "18.16.8",
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.2.4",
+    "eslint": "8.40.0",
+    "eslint-config-next": "13.4.2",
+    "sass": "1.62.1",
+    "typescript": "5.0.4"
+  }
+}
